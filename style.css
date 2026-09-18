@@ -1,0 +1,640 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    background:
+
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255, 210, 220, 0.45),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(230, 215, 255, 0.35),
+            transparent 25%
+        ),
+
+        #fff9f5;
+
+    color: #46373d;
+
+    font-family: "Playfair Display", serif;
+
+    overflow-x: hidden;
+}
+
+
+
+/* STARS */
+
+.stars {
+
+    position: fixed;
+
+    top: 20px;
+
+    left: 0;
+
+    right: 0;
+
+    text-align: center;
+
+    color: #b89aa5;
+
+    font-size: 15px;
+
+    letter-spacing: 4px;
+
+    opacity: 0.7;
+
+    z-index: 10;
+}
+
+
+
+/* COVER + PAGES */
+
+.cover,
+.page {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 40px 20px;
+
+}
+
+
+
+/* DIARY COVER */
+
+.diary {
+
+    width: min(90%, 650px);
+
+    padding: 70px 45px;
+
+    background:
+
+        repeating-linear-gradient(
+
+            transparent,
+
+            transparent 31px,
+
+            rgba(180, 145, 150, 0.12) 32px
+
+        );
+
+    border-left: 1px solid rgba(150, 110, 120, 0.15);
+
+    border-right: 1px solid rgba(150, 110, 120, 0.15);
+
+    box-shadow:
+
+        0 20px 50px rgba(80, 50, 60, 0.08);
+
+    transform: rotate(-0.5deg);
+}
+
+
+
+/* TEXT */
+
+.tiny {
+
+    font-family: "Caveat", cursive;
+
+    font-size: 20px;
+
+    color: #a78a94;
+}
+
+
+h1 {
+
+    font-family: "Caveat", cursive;
+
+    font-size: clamp(55px, 10vw, 90px);
+
+    font-weight: 500;
+
+    margin: 10px 0;
+}
+
+
+h2 {
+
+    font-family: "Caveat", cursive;
+
+    font-size: clamp(38px, 7vw, 60px);
+
+    font-weight: 500;
+
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+
+.intro {
+
+    max-width: 500px;
+
+    margin: 30px auto;
+
+    line-height: 2;
+
+    font-size: 17px;
+}
+
+
+.small-note {
+
+    font-family: "Caveat", cursive;
+
+    font-size: 23px;
+
+    color: #8f747e;
+}
+
+
+.handwriting {
+
+    font-family: "Caveat", cursive;
+
+    font-size: 28px;
+
+    color: #80606b;
+
+    text-align: center;
+}
+
+
+.text {
+
+    max-width: 520px;
+
+    line-height: 2;
+
+    text-align: center;
+
+    font-size: 16px;
+}
+
+
+
+/* LINE */
+
+.line {
+
+    width: 90px;
+
+    height: 1px;
+
+    background: #9d7e87;
+
+    margin: 25px auto;
+}
+
+
+
+/* BUTTON */
+
+button {
+
+    margin-top: 35px;
+
+    padding: 12px 25px;
+
+    border: 1px solid #92727d;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.5);
+
+    color: #594149;
+
+    font-family: "Caveat", cursive;
+
+    font-size: 21px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+button:hover {
+
+    transform: translateY(-3px);
+
+    background: #594149;
+
+    color: white;
+
+    box-shadow:
+        0 8px 20px rgba(80, 50, 60, 0.15);
+
+}
+
+
+
+/* PAGE NUMBER */
+
+.page-number {
+
+    font-family: "Caveat", cursive;
+
+    color: #a58b94;
+
+    font-size: 18px;
+}
+
+
+
+/* MAIN PHOTO */
+
+.photo-frame {
+
+    position: relative;
+
+    width: min(80vw, 350px);
+
+    padding: 12px 12px 35px;
+
+    background: white;
+
+    box-shadow:
+        0 15px 35px rgba(70, 50, 55, 0.15);
+
+    transform: rotate(-2deg);
+
+    margin-bottom: 25px;
+}
+
+
+.photo-frame img {
+
+    width: 100%;
+
+    height: 390px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.together {
+
+    transform: rotate(2deg);
+}
+
+
+.together img {
+
+    height: 320px;
+}
+
+
+
+/* TAPE */
+
+.tape {
+
+    position: absolute;
+
+    width: 100px;
+
+    height: 28px;
+
+    background: rgba(225, 195, 200, 0.65);
+
+    top: -13px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%)
+        rotate(-2deg);
+}
+
+
+
+/* MEMORY PHOTOS */
+
+.memory-grid {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+
+    max-width: 700px;
+
+    margin-bottom: 20px;
+}
+
+
+.mini-photo {
+
+    width: 260px;
+
+    padding: 10px 10px 20px;
+
+    background: white;
+
+    box-shadow:
+        0 12px 30px rgba(70, 50, 55, 0.13);
+
+    transform: rotate(-3deg);
+}
+
+
+.mini-photo:nth-child(2) {
+
+    transform: rotate(3deg);
+
+}
+
+
+.mini-photo img {
+
+    width: 100%;
+
+    height: 270px;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+.mini-photo p {
+
+    font-family: "Caveat", cursive;
+
+    font-size: 20px;
+
+    margin: 10px 0 0;
+
+    color: #80606b;
+}
+
+
+
+/* NOTES */
+
+.notes {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+
+    max-width: 650px;
+
+    width: 100%;
+}
+
+
+.note {
+
+    min-height: 150px;
+
+    padding: 30px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    font-family: "Caveat", cursive;
+
+    font-size: 23px;
+
+    line-height: 1.4;
+
+    background: #fff1d9;
+
+    box-shadow:
+        0 8px 20px rgba(80, 50, 50, 0.08);
+
+    transform: rotate(-1deg);
+}
+
+
+.note:nth-child(2) {
+    transform: rotate(2deg);
+}
+
+
+.note:nth-child(3) {
+    transform: rotate(1deg);
+}
+
+
+.note:nth-child(4) {
+    transform: rotate(-2deg);
+}
+
+
+
+/* FINAL PAGE */
+
+.final-page {
+
+    text-align: center;
+
+    max-width: 800px;
+
+    margin: auto;
+}
+
+
+.final-decoration {
+
+    font-size: 40px;
+
+    color: #a6818c;
+
+    animation: float 3s ease-in-out infinite;
+}
+
+
+.letter {
+
+    max-width: 600px;
+
+    line-height: 2;
+
+    font-size: 16px;
+
+    white-space: pre-line;
+}
+
+
+.letter span {
+
+    font-family: "Caveat", cursive;
+
+    font-size: 30px;
+
+    color: #80606b;
+}
+
+
+.signature {
+
+    font-family: "Caveat", cursive;
+
+    font-size: 23px;
+
+    color: #80606b;
+
+    margin-top: 35px;
+}
+
+
+.end {
+
+    margin-top: 35px;
+
+    color: #a58b94;
+}
+
+
+
+/* HIDDEN */
+
+.hidden {
+
+    display: none;
+}
+
+
+
+/* PAGE ANIMATION */
+
+.page {
+
+    animation: pageIn 1s ease;
+}
+
+
+@keyframes pageIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+
+/* FLOATING HEART */
+
+@keyframes float {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-10px);
+
+    }
+
+}
+
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .diary {
+
+        padding: 55px 25px;
+
+    }
+
+
+    .notes {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .photo-frame img {
+
+        height: 350px;
+
+    }
+
+
+    .together img {
+
+        height: 280px;
+
+    }
+
+
+    .mini-photo {
+
+        width: min(80vw, 300px);
+
+    }
+
+
+    .mini-photo img {
+
+        height: 300px;
+
+    }
+
+}

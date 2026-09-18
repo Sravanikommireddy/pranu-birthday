@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dear Pranu ♡</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+    <!-- LITTLE STARS -->
+
+    <div class="stars">
+        ✦　⋆　✧　⋆　✦
+    </div>
+
+
+
+    <!-- COVER -->
+
+    <section class="cover" id="cover">
+
+        <div class="diary">
+
+            <p class="tiny">
+                a little something for you
+            </p>
+
+
+            <h1>
+                Dear Pranu,
+            </h1>
+
+
+            <div class="line"></div>
+
+
+            <p class="intro">
+
+                I don't really know how to put everything
+                I want to say into a normal birthday message...
+
+            </p>
+
+
+            <p class="small-note">
+
+                so I made you a little diary instead.
+
+            </p>
+
+
+            <button onclick="openDiary()">
+
+                turn the page →
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+
+    <!-- PAGE 1 -->
+
+    <section class="page hidden" id="page1">
+
+        <p class="page-number">
+            01 / 05
+        </p>
+
+
+        <h2>
+            the girl behind these pages
+        </h2>
+
+
+        <div class="photo-frame">
+
+            <img
+                src="images/solo1.jpeg"
+                alt="Pranu"
+            >
+
+            <span class="tape"></span>
+
+        </div>
+
+
+        <p class="handwriting">
+
+            This is Pranu.
+
+        </p>
+
+
+        <p class="text">
+
+            My closest friend.
+
+            The person who somehow knows about all
+            the random things happening in my life.
+
+        </p>
+
+
+        <p class="handwriting">
+
+            basically... my personal diary,
+            but with a face. ♡
+
+        </p>
+
+
+        <button onclick="nextPage(2)">
+
+            next page →
+
+        </button>
+
+    </section>
+
+
+
+
+    <!-- PAGE 2 -->
+
+    <section class="page hidden" id="page2">
+
+        <p class="page-number">
+            02 / 05
+        </p>
+
+
+        <h2>
+            one of my favourite pages
+        </h2>
+
+
+        <div class="photo-frame together">
+
+            <img
+                src="images/both1.jpeg"
+                alt="Us"
+            >
+
+            <span class="tape"></span>
+
+        </div>
+
+
+        <p class="handwriting">
+            us.
+        </p>
+
+
+        <p class="text">
+
+            One picture, one memory,
+            and somehow a whole lot of things
+            I could write here.
+
+        </p>
+
+
+        <p class="small-note">
+
+            I'm keeping some of them to myself though. :)
+
+        </p>
+
+
+        <button onclick="nextPage(3)">
+
+            keep reading →
+
+        </button>
+
+    </section>
+
+
+
+
+    <!-- PAGE 3 -->
+
+    <section class="page hidden" id="page3">
+
+        <p class="page-number">
+            03 / 05
+        </p>
+
+
+        <h2>
+            little pieces of us
+        </h2>
+
+
+        <div class="memory-grid">
+
+
+            <div class="mini-photo">
+
+                <img
+                    src="images/both2.jpeg"
+                    alt="Memory"
+                >
+
+                <p>
+                    another little memory ♡
+                </p>
+
+            </div>
+
+
+
+            <div class="mini-photo">
+
+                <img
+                    src="images/both3.jpeg"
+                    alt="Memory"
+                >
+
+                <p>
+                    keeping this one here :)
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <p class="handwriting">
+
+            Some moments don't need
+            a long explanation.
+
+        </p>
+
+
+        <button onclick="nextPage(4)">
+
+            one more page →
+
+        </button>
+
+    </section>
+
+
+
+
+    <!-- PAGE 4 -->
+
+    <section class="page hidden" id="page4">
+
+        <p class="page-number">
+            04 / 05
+        </p>
+
+
+        <h2>
+            things I don't say enough
+        </h2>
+
+
+        <div class="notes">
+
+
+            <div class="note">
+
+                You make ordinary days
+                feel a little less ordinary.
+
+            </div>
+
+
+            <div class="note">
+
+                I can tell you the most random
+                things and somehow you still listen.
+
+            </div>
+
+
+            <div class="note">
+
+                You're one of those people
+                I'm genuinely grateful I met.
+
+            </div>
+
+
+            <div class="note">
+
+                And yes, you're stuck with me.
+
+                Unfortunately. ♡
+
+            </div>
+
+
+        </div>
+
+
+        <button onclick="nextPage(5)">
+
+            one last page →
+
+        </button>
+
+    </section>
+
+
+
+
+    <!-- FINAL PAGE -->
+
+    <section class="page hidden final-page" id="page5">
+
+        <p class="page-number">
+            05 / 05
+        </p>
+
+
+        <div class="final-decoration">
+            ♡
+        </div>
+
+
+        <h1>
+
+            Happy Birthday,
+            <br>
+            Pranu
+
+        </h1>
+
+
+        <div class="line"></div>
+
+
+        <p class="letter">
+
+            I hope this year brings you
+            the kind of happiness that stays
+            a little longer than expected.
+
+            <br><br>
+
+            I hope you get all the little things
+            you wish for, the big things you're
+            scared to wish for, and plenty of
+            reasons to laugh until your stomach hurts.
+
+            <br><br>
+
+            Thank you for being the person
+            I can tell things to, the person
+            I can be completely random with,
+            and most importantly...
+
+            <br><br>
+
+            <span>
+                my personal diary. ♡
+            </span>
+
+            <br><br>
+
+            Stay exactly as cute, weird
+            and wonderful as you are.
+
+        </p>
+
+
+        <p class="signature">
+
+            — from someone who's very lucky
+            to have you
+
+        </p>
+
+
+        <div class="end">
+
+            ✦　♡　✦
+
+        </div>
+
+    </section>
+
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
